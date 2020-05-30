@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Parent</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/index.css">
+        <style>
+            input[type=text] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .Submit {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            fieldset {
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin: 25px  75px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .Submit:hover {
+                background-color: #45a049;
+            }
+            </style>
+    </head>
+
+    <body>
+        <h1 style="text-align: left; margin-left: 25px;">HOSTEL MANAGEMENT SYSTEM</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="student.html">STUDENT</a></li>
+            <li><a href="warden.html">WARDEN</a></li>
+            <li><a class="active" href="parent.html">PARENT</a></li>
+            <li><a href="dorm.html">DORM</a></li>
+            <li><a href="hostel.html">HOSTEL</a></li>
+        </ul>
+        <form action="../php/parent/addparent.php" method="POST">
+            <fieldset>
+                <legend><h2 style="color: black;">ADD PARENT</h2></legend>            
+                <label for="parid" style="color: black;">Parent ID:</label>
+                <input type="text" placeholder="Parent ID" name="parid"> <br>
+                <label for="parnm" style="color: black;">Parent Name:</label>
+                <input type="text" placeholder="Parent Name" name="parnm"> <br>
+                <label for="parrc" style="color: black;">Parent Race:</label>
+                <input type="text" placeholder="Parent Race" name="parrc"> <br>
+                <label for="parrl" style="color: black;">Parent Religion:</label>
+                <input type="text" placeholder="Parent Religion" name="parrl"> <br>
+                <label for="pargn" style="color: black;">Parent Gender:</label>
+                <input type="text" placeholder="Parent Gender" name="pargn"> <br>
+                <label for="paroc" style="color: black;">Parent Occupation:</label>
+                <input type="text" placeholder="Parent Occupation" name="paroc"> <br>
+                <label for="parct" style="color: black;">Parent Contact:</label>
+                <input type="text" placeholder="Parent Contact" name="parct"> <br>
+                <label for="parad" style="color: black;">Parent Address:</label>
+                <input type="text" placeholder="Parent Address" name="parad"> <br>
+                <button type="submit" class="Submit" name="submit-addpar">Submit</button>
+            </fieldset>
+        </form>
+
+    </body>
+
+</html>

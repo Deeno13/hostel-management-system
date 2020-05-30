@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Student</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/index.css">
+        <style>
+            input[type=text], input[type=date] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            .Submit {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            fieldset {
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+                margin: 25px  75px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
+            .Submit:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: left; margin-left: 25px;">HOSTEL MANAGEMENT SYSTEM</h1>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a class="active" href="student.html">STUDENT</a></li>
+            <li><a href="warden.html">WARDEN</a></li>
+            <li><a href="parent.html">PARENT</a></li>
+            <li><a href="dorm.html">DORM</a></li>
+            <li><a href="hostel.html">HOSTEL</a></li>
+        </ul>
+    <form action="../php/student/addstudent.php" method="POST">
+        <fieldset>
+            <legend style="color: black;"><h2>ADD STUDENT</h2></legend>
+            <label for="stuid" style="color: black;">Student ID      :</label>
+            <input type="text" placeholder="Student ID" name="stuid"> <br>
+            <label for="stunm" style="color: black;">Student Name    :</label>
+            <input type="text" placeholder="Student Name" name="stuname"> <br>
+            <label for="sturace" style="color: black;">Student Race    :</label>
+            <input type="text" placeholder="Student Race" name="sturace"> <br>
+            <label for="stureligion" style="color: black;">Student Religion:</label>
+            <input type="text" placeholder="Student Religion" name="stureligion"> <br>
+            <label for="stubd" style="color: black;">Student Birthdate:</label>
+            <input type="date" placeholder="Student Birthdate" name="stubd"> <br>
+            <label for="stugender" style="color: black;">Student Gender  :</label>
+            <input type="text" placeholder="Student Gender" name="stugender"> <br>
+            <label for="stuclass" style="color: black;">Student Class   :</label>
+            <input type="text" placeholder="Student Class" name="stuclass"> <br>
+            <label for="stuaddress" style="color: black;">Student Address :</label>
+            <input type="text" placeholder="Student Address" name="stuaddress"> <br>
+            <label for="drmnum" style="color: black;">Dorm Number     :</label>
+            <input type="text" placeholder="Dorm Number" name="drmnum"> <br>
+            <label for="parid" style="color: black;">Parent ID       :</label>
+            <input type="text" placeholder="Parent ID" name="parid"> <br>
+            <button type="submit" class="Submit" name="submit-addstu">Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="../php/student/getstudent.php" method="POST">
+        <fieldset>
+            <legend style="color: black;"><h2>UPDATE STUDENT</h2></legend>
+            <label for="getstu" style="color: black;">Student ID:</label>
+            <input type="text" placeholder="Student ID" name="getstu"> <br>
+            <button type="submit" class="Submit" name="submit-getstu">Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="../php/student/reportstudent.php" method="POST">
+        <fieldset>
+            <legend style="color: black;"><h2>REPORT STUDENT</h2></legend>
+            <label for="stureport" style="color: black;">Student ID:</label>
+            <input type="text" placeholder="Student ID" name="stureport"> <br>
+            <button type="submit" class="Submit" name="submit-stureport">Submit</button>
+        </fieldset>
+    </form>
+
+    <form action="../php/student/reportstudent.php" method="POST">
+        <fieldset>
+            <legend style="color: black;"><h2>REPORT CHRISTIAN STUDENTS</h2></legend>
+            <button type="submit" class="Submit" name="submit-chrisreport">Submit</button>
+        </fieldset>
+    </form>
+    </body>
+</html>
